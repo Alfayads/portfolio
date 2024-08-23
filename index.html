@@ -325,7 +325,7 @@
               </div>
               <div class="row">
                   <div class="col-lg-12 form-group">
-                      <input type="text" name="lastname" class="form-control lname-field" placeholder="Password">
+                      <input type="password" name="lastname" class="form-control lname-field" placeholder="Password">
                       <p class="text-danger m-2 error-message" id="lastnameError">Enter Password</p>
                   </div>
               </div>
@@ -366,14 +366,6 @@
             document.getElementById('nameError').style.display = 'none';
         }
     
-
-        const lnamePattern = /^[^\s][a-zA-Z]{1,}(?:\s[a-zA-Z]*)?$/;
-        if (!lnamePattern.test(lastName.value) || lastName.value.trim() === '') {
-            document.getElementById('lastnameError').style.display = 'block';
-            return false;
-        } else {
-            document.getElementById('lastnameError').style.display = 'none';
-        }
     
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-z]+\.[a-z]{2,3}$/;
         if (!emailPattern.test(email.value.trim())) {
